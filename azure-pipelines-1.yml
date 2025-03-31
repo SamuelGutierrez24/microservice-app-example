@@ -35,5 +35,5 @@ steps:
         dep ensure
     fi
     go build -v .
-  workingDirectory: '$(system.defaultWorkingDirectory)'
+  workingDirectory: '$(system.defaultWorkingDirectory)/auth-api'
   displayName: 'Get dependencies, then build'
