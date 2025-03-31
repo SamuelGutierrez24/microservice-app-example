@@ -17,6 +17,7 @@ steps:
 
 - script: |
     cd frontend
-    npm install
+    rm -rf node_modules package-lock.json
+    npm install --force
     npm run build
-  displayName: 'npm install and build'
+displayName: 'Clean install and build'
