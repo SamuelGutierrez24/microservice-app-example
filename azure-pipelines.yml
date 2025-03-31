@@ -15,9 +15,14 @@ steps:
     versionSpec: '20.x'
   displayName: 'Install Node.js'
 
+  - script: |
+    sudo apt-get update
+    sudo apt-get install -y python2
+  displayName: 'Install Python 2'
+
+
 - script: |
     cd frontend
-    rm -rf node_modules package-lock.json
-    npm install --force
+    npm install
     npm run build
   displayName: 'Clean install and build'
